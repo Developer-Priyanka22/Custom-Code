@@ -1,0 +1,51 @@
+ {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.id == 8036329652398 %}\n<div class=\"bundle-button-container\">\n<a href=\"\/cart\/add\/44121645351086\" class=\"button bundle-btn button--primary\" style=\"width:100%;\"> Add To Cart<\/a>\n<\/div>\n  {% endif %}"
+          }
+        },
+        "custom_liquid_Pbn9ny": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if product.id == 8036329652398 %}\n<div class=\"product_img_ct\">\n<h2>Vote  or Dare Core Game<\/h2>\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0621\/3805\/6878\/files\/voteordarePrice_1.png?v=1712938666\">\n<\/div>\n {% endif %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_liquid_fgf8td": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if product.id == 8036329652398 %}\n<div class='product_grapic_new'>\n<img src='https:\/\/cdn.shopify.com\/s\/files\/1\/0621\/3805\/6878\/files\/voteordare8_1.png?v=1710002125'>\n<\/div>\n  {% endif %}"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "icon_with_text_CPcPNf",
+        "rating_4rfpJ8",
+        "image_q4cfeH",
+        "image_tNaGkq",
+        "description",
+        "variant_picker",
+        "price",
+        "quantity_selector",
+        "8a1e23f0-db94-439a-84b8-fc339c15904b",
+        "custom_liquid_Pbn9ny",
+        "buy_buttons",
+        "custom_liquid_fgf8td"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
