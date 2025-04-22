@@ -1,0 +1,48 @@
+<!-- ====  Symmetry Theme Cart Refresh Code ==== -->
+document.documentElement.dispatchEvent(
+new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false, detail: { openDrawer: true } }));
+
+
+<!-- ==== AJAX DOWN THEME Refresh Cart Function ==== -->
+
+function refreshCart() {
+    setTimeout(function(){
+        $. ajax({
+          url: '/?section_id=cart-drawer',
+          type: 'GET',
+          dataType: 'html',
+          success: function (carthtml) {
+          $(' cart-drawer').html ($(carthtml). find( 'cart-drawer') .html());
+           $("cart-drawer").addClass("active").removeClass("is-empty");
+          $("body").addClass("overflow-hidden");
+          }
+        }) ;
+         $(".add_to_cart_cstm .loading-overlay__spinner").addClass("hidden");
+        $(".add_to_cart_cstm .text").removeClass("hidden");
+    },500);
+    }
+    
+    $("button.button.add_to_cart_cstm").on("click", function(){
+        $(this).find(".text").addClass("hidden");
+        $(this).find(".loading-overlay__spinner").removeClass("hidden");
+        var variant_id = $(this).attr('data-var-id');
+        $.ajax({
+          type: 'POST',
+          url: '/cart/add.js',
+          data: {
+            quantity: 1,
+            id: variant_id
+          },
+          dataType: 'json',
+          success: function(data) {
+            refreshCart();
+          }
+        });
+      });
+
+      
+<!-- ==== Impulse theme cart Refresh ==== -->
+ <!-- Add on your custom ajax add to cart success -->
+var cart = new theme.CartDrawer
+cart.init()
+cart.open();
