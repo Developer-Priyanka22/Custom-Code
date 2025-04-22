@@ -3,6 +3,8 @@ document.documentElement.dispatchEvent(
 new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false, detail: { openDrawer: true } }));
 
 
+
+
 <!-- ==== AJAX DOWN THEME Refresh Cart Function ==== -->
 
 function refreshCart() {
@@ -39,6 +41,8 @@ function refreshCart() {
           }
         });
       });
+
+
 
       
 <!-- ==== Impulse theme cart Refresh ==== -->
